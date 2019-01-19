@@ -11,8 +11,11 @@ import GridItem from "components/Grid/GridItem.jsx";
 import Card from "components/Card/Card.jsx";
 import carouselStyle from "assets/jss/material-kit-react/views/componentsSections/carouselStyle.jsx";
 import image1 from "assets/img/img1.png";
-import image2 from "assets/img/Logo20ans.jpg";
-import image3 from "assets/img/img2.png";
+import image2 from "assets/img/img2.png";
+import image3 from "assets/img/img3.png";
+import image4 from "assets/img/img4.jpg";
+import image5 from "assets/img/img5.jpg";
+
 
 class SectionCarousel extends React.Component {
   render() {
@@ -69,6 +72,34 @@ class SectionCarousel extends React.Component {
                       <h4>
                         <LocationOn className="slick-icons" />Yellowstone
                         National Park, United States
+                      </h4>
+                    </div>*/}
+                  </div>
+                  <div>
+                    <img
+                      src={image4}
+                      alt="Second slide"
+                      className="slick-image"
+                      
+                    />
+                    {/*<div className="slick-caption">
+                      <h4>
+                        <LocationOn className="slick-icons" />Somewhere Beyond,
+                        United States
+                      </h4>
+                    </div>*/}
+                  </div>
+                  <div>
+                    <img
+                      src={image5}
+                      alt="Second slide"
+                      className="slick-image"
+                      
+                    />
+                    {/*<div className="slick-caption">
+                      <h4>
+                        <LocationOn className="slick-icons" />Somewhere Beyond,
+                        United States
                       </h4>
                     </div>*/}
                   </div>

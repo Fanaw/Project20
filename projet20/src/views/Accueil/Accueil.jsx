@@ -14,7 +14,7 @@ import Parallax from "components/Parallax/Parallax.jsx";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.jsx";
 import SectionPills from "./Sections/SectionPills.jsx";
-import Sondage from "views/Sondage/Sondage.jsx";
+import SectionCarousel from "views/Components/Sections/SectionCarousel.jsx";
 import accueilStyle from "assets/jss/material-kit-react/views/accueil.jsx";
 
 
@@ -36,13 +36,13 @@ class Accueil extends React.Component {
           }}
           {...rest}
         />
-        <Parallax data-parallax="false" image={require("assets/img/Logo20ans.jpg")}>
+        <Parallax data-parallax="false" image={require("assets/img/main.png")}>
           <div className={classes.container}>
 
             <GridContainer>
               <GridItem>
                 <div className={classes.brand}>
-                  
+                
                  
                 </div>
               </GridItem>
@@ -52,18 +52,34 @@ class Accueil extends React.Component {
 
         <div className={classNames(classes.main, classes.mainRaised)}>
           <div id="prog">
-            <SectionPills />
+            {/*<SectionPills />
+            <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/-68Y-b8eKB4" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+            </iframe>
+            */}
+           <GridContainer spacing={24}>
+            <GridItem xs={6}>
+              <SectionPills />
+            </GridItem>
+            <GridItem xs={6}>
+              <iframe 
+              width="900 " 
+              height="500" 
+              src="https://www.youtube.com/embed/-68Y-b8eKB4" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+              </iframe>
+            </GridItem>
+          </GridContainer>  
           </div>
-          {/* <GridContainer spacing={24}>
-            <GridItem xs={6}>
-              <SectionCarousel />
-            </GridItem>
-            <GridItem xs={6}>
-              <SectionLogin />
-            </GridItem>
-          </GridContainer> */}
           <div id="sondage">
-            <Sondage />
+            <SectionCarousel />
           </div>
         </div>
 
