@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors');
 
 var indexRouter = require('./routes/index');
 
@@ -22,16 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(function(_req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-});
-
-app.options('http://localhost:3000/*', function (request, response, next) {
-  response.header("Access-Control-Allow-Methods", "GET, PUT, POST, DELETE, OPTIONS");
-  response.send();
-});
+app.use(cors());
 
 app.use(session({
   store: new mysqlStore({}, db.pool),
@@ -41,7 +33,7 @@ app.use(session({
 }));
 
 app.use('/', indexRouter);
-
+/*
 // catch 404 and forward to error handler
 app.use(function(_req, _res, next) {
   next(createError(404));
@@ -57,5 +49,6 @@ app.use(function(err, req, res, _next) {
   res.status(err.status || 500);
   res.render('error');
 });
+*/
 
 module.exports = app;
