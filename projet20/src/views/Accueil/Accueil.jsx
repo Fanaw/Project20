@@ -28,7 +28,7 @@ class Accueil extends React.Component {
         <Header
           brand="Accueil"
           fixed
-          rightLinks={<HeaderLinks />}
+          
           color="white"
           changeColorOnScroll={{
             height: 300,
