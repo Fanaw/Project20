@@ -75,8 +75,8 @@ class Header extends React.Component {
       [classes.fixed]: fixed
     });
     const brandComponent1 = <Button className={classes.title} onClick={() => { document.getElementById('accueil').scrollIntoView(); }}>Accueil</Button>;
-    const brandComponent2 = <Button className={classes.title} onClick={() => { document.getElementById('prog').scrollIntoView(); }}>Programme</Button>;
-    const brandComponent3 = <Button className={classes.title} onClick={() => { document.getElementById('sondage').scrollIntoView(); }}>Sondage</Button>;
+    const brandComponent2 = <Button className={classes.title} onClick={() => { document.getElementById('prog').scrollIntoView(); }}>Description</Button>;
+    const brandComponent3 = <Button className={classes.title} onClick={() => { document.getElementById('sondage').scrollIntoView(); }}>Plus</Button>;
     return (
       <AppBar className={appBarClasses}>
         <Toolbar className={classes.container}>
